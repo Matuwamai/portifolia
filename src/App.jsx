@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Projects from "./components/Projects";
+import Projects from "./components/Projects"; // This is now the updated version
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -29,7 +29,8 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
+        <Projects />{" "}
+        {/* This will now show all your projects with the split layout */}
         <Skills />
         <Contact />
       </main>
