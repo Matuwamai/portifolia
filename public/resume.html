@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matu Wamai - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fa;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .resume {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            padding: 40px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .header .title {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+        
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+        
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #7c3aed;
+            display: inline-block;
+        }
+        
+        .summary {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #7c3aed;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 10px;
+        }
+        
+        .skill-category h4 {
+            color: #7c3aed;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-left: 16px;
+            border-left: 3px solid #7c3aed;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .item-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        
+        .item-subtitle {
+            color: #7c3aed;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        
+        .item-date {
+            color: #64748b;
+            font-size: 14px;
+            background: #f1f5f9;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        
+        .item-description {
+            color: #475569;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .achievement-list {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .achievement-list li {
+            color: #475569;
+            font-size: 14px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .achievement-list li:before {
+            content: "✓";
+            color: #7c3aed;
+            font-weight: bold;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .hobbies {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        
+        .hobby-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .hobby-tag {
+            background: white;
+            padding: 6px 14px;
+            border-radius: 25px;
+            font-size: 13px;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">
+        📥 Download PDF (Print)
+    </button>
+
+    <div class="resume" id="resume">
+        <div class="header">
+            <h1>MATU WAMAI</h1>
+            <div class="title">Full Stack Developer</div>
+            
+            <div class="contact-row">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    wamaimatu@gmail.com
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    +254 714724209
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Nairobi, Kenya
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Summary -->
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Passionate Full Stack Developer with 2+ years of experience building robust web and mobile applications. 
+                    Specialized in creating elegant solutions for e-commerce platforms, real-time applications, and developer tools. 
+                    Proven track record of delivering high-quality projects including POS systems with M-Pesa integration, 
+                    car-hire marketplaces, and social awareness platforms.
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">HTML5/CSS3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Prisma</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">GraphQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Database</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">SQLite</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Jira</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Mobile</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">iOS</span>
+                            <span class="skill-tag">Android</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Other</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Qt Framework</span>
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Full Stack Developer</span>
+                        <span class="item-date">2024 - Present</span>
+                    </div>
+                    <div class="item-subtitle">Nelite It Solutions</div>
+                    <p class="item-description">
+                        Contributed to the development of multiple web applications including e-commerce platforms and POS systems. Mentor junior developers and architect scalable solutions.
+                    </p>
+                    <ul class="achievement-list">
+                        <li>Built Nelite POS system with integrated M-Pesa payments</li>
+                        <li>Developed Car-Hire marketplace connecting 1000+ users</li>
+                        <li>Implemented real-time features using WebSockets</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Freelance Full Stack Developer</span>
+                        <span class="item-date">2020 - 2022</span>
+                    </div>
+                    <div class="item-subtitle">Self-Employed</div>
+                    <p class="item-description">
+                        Developed and maintained full-stack web applications for various clients across different industries.
+                    </p>
+                    <ul class="achievement-list">
+                        <li>Created GVB Support platform with Africa's Talking API integration</li>
+                        <li>Built Hamisha Epic Tours booking system</li>
+                        <li>Optimized database queries improving performance by 40%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Software Developer</span>
+                        <span class="item-date">2024 - 2025</span>
+                    </div>
+                    <div class="item-subtitle">StartUp Hub</div>
+                    <p class="item-description">
+                        Started career developing desktop applications and transitioning to web development.
+                    </p>
+                    <ul class="achievement-list">
+                        <li>Developed Qt Assignment Manager desktop application</li>
+                        <li>Collaborated on open-source projects</li>
+                        <li>Implemented responsive designs for client websites</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div class="two-column">
+                <div>
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="item-header">
+                            <span class="item-title">BSc in Computer Science</span>
+                            <span class="item-date">2024 - Present</span>
+                        </div>
+                        <div class="item-subtitle">University of Technology</div>
+                        <ul class="achievement-list">
+                            <li>Specialized in Software Engineering</li>
+                            <li>Thesis on Real-time Web Applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <span class="item-title">Full Stack Web Development Bootcamp</span>
+                            <span class="item-date">2019</span>
+                        </div>
+                        <div class="item-subtitle">Power Learn Program Academy</div>
+                        <ul class="achievement-list">
+                            <li>Completed intensive 6-month program</li>
+                            <li>Built 10+ full-stack projects</li>
+                            <li>Learned modern web technologies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="skill-category" style="margin-bottom: 20px;">
+                        <ul class="achievement-list">
+                            <li>Meta Front-End Developer Professional Certificate</li>
+                            <li>Google UX Design Professional Certificate</li>
+                            <li>MongoDB Certified Developer</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="section-title">Interests & Hobbies</h2>
+                    <div class="hobbies">
+                        <div class="hobby-tags">
+                            <span class="hobby-tag">📚 Tech Blogs</span>
+                            <span class="hobby-tag">🎮 Gaming</span>
+                            <span class="hobby-tag">🏃 Running</span>
+                            <span class="hobby-tag">🎸 Guitar</span>
+                            <span class="hobby-tag">☕ Coffee</span>
+                            <span class="hobby-tag">🌍 Traveling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add print functionality
+        document.querySelector('.print-button').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+</body>
+</html>

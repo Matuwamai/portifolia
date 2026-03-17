@@ -127,16 +127,16 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 mx-auto rounded-2xl overflow-hidden border-4 border-gradient-to-r from-blue-500 to-purple-500">
                   <img
-                    src="https://chatgpt.com/s/m_69b9b8f1128c8191a33590d2776eb982"
+                    src="./public/matu.png"
                     alt="Profile"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover, "
                   />
                 </div>
 
                 {/* Download Resume Button */}
                 <motion.a
                   href="/resume.pdf"
-                  download
+                  download="Matu_Wamai_Resume.pdf"
                   className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
