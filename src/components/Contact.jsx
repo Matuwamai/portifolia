@@ -52,15 +52,15 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <FaEnvelope className="text-2xl text-blue-400" />
-                <span className="text-white/80">john.doe@example.com</span>
+                <span className="text-white/80">wamaimatu@gmail.com</span>
               </div>
               <div className="flex items-center space-x-4">
                 <FaPhone className="text-2xl text-blue-400" />
-                <span className="text-white/80">+1 (555) 123-4567</span>
+                <span className="text-white/80">+254 714724209</span>
               </div>
               <div className="flex items-center space-x-4">
                 <FaMapMarkerAlt className="text-2xl text-blue-400" />
-                <span className="text-white/80">San Francisco, CA</span>
+                <span className="text-white/80">Nairobi, Ke</span>
               </div>
             </div>
           </motion.div>

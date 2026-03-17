@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects"; // This is now the updated version
-import Skills from "./components/Skills";
+// import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -31,7 +31,7 @@ function App() {
         <About />
         <Projects />{" "}
         {/* This will now show all your projects with the split layout */}
-        <Skills />
+        {/* <Skills /> */}
         <Contact />
       </main>
       <Footer />

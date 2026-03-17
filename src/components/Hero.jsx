@@ -31,7 +31,7 @@ const Hero = () => {
           >
             Hi, I'm{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-              John Doe
+              Matu Wamai
             </span>
           </motion.h1>
 

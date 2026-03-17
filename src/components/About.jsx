@@ -33,11 +33,11 @@ const About = () => {
 
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
+      title: " Full Stack Developer",
+      company: "Nelite It Solutions",
+      period: "2024 - Present",
       description:
-        "Lead development of multiple web applications including e-commerce platforms and POS systems. Mentor junior developers and architect scalable solutions.",
+        "Contributed to the development of multiple web applications including e-commerce platforms and POS systems. Mentor junior developers and architect scalable solutions.",
       achievements: [
         "Built Nelite POS system with integrated M-Pesa payments",
         "Developed Car-Hire marketplace connecting 1000+ users",
@@ -45,8 +45,8 @@ const About = () => {
       ],
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Ltd",
+      title: "Free lance Full Stack Developer",
+      company: "Self-Employed",
       period: "2020 - 2022",
       description:
         "Developed and maintained full-stack web applications for various clients across different industries.",
@@ -59,7 +59,7 @@ const About = () => {
     {
       title: "Software Developer",
       company: "StartUp Hub",
-      period: "2019 - 2020",
+      period: "2024 - 2025",
       description:
         "Started career developing desktop applications and transitioning to web development.",
       achievements: [
@@ -74,16 +74,15 @@ const About = () => {
     {
       degree: "BSc in Computer Science",
       institution: "University of Technology",
-      period: "2015 - 2019",
+      period: "2024 - present",
       achievements: [
-        "Graduated with First Class Honors",
         "Specialized in Software Engineering",
         "Thesis on Real-time Web Applications",
       ],
     },
     {
       degree: "Full Stack Web Development Bootcamp",
-      institution: "Code Academy",
+      institution: "Power Learn program Academy",
       period: "2019",
       achievements: [
         "Completed intensive 6-month program",
@@ -94,7 +93,7 @@ const About = () => {
   ];
 
   const certifications = [
-    "AWS Certified Developer – Associate",
+    // "AWS Certified Developer – Associate",
     "Meta Front-End Developer Professional Certificate",
     "Google UX Design Professional Certificate",
     "MongoDB Certified Developer",
@@ -128,7 +127,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 mx-auto rounded-2xl overflow-hidden border-4 border-gradient-to-r from-blue-500 to-purple-500">
                   <img
-                    src="https://via.placeholder.com/400x400/1a1a2e/ffffff?text=Your+Photo"
+                    src="https://chatgpt.com/s/m_69b9b8f1128c8191a33590d2776eb982"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
@@ -156,11 +155,11 @@ const About = () => {
                 transition={{ delay: 0.2 }}
               >
                 <h3 className="text-2xl font-bold mb-4 text-white/90">
-                  Hi, I'm John Doe 👋
+                  Hi, I'm Matu Wamai 👋
                 </h3>
 
                 <p className="text-white/70 mb-4 leading-relaxed">
-                  I'm a passionate Full Stack Developer with over 5 years of
+                  I'm a passionate Full Stack Developer with over 2 years of
                   experience building robust web and mobile applications. I
                   specialize in creating elegant solutions for complex problems,
                   with a particular focus on e-commerce platforms, real-time
@@ -168,9 +167,9 @@ const About = () => {
                 </p>
 
                 <p className="text-white/70 mb-4 leading-relaxed">
-                  My journey in tech started with desktop applications using C++
-                  and Qt, and evolved into full-stack web development. I've had
-                  the privilege of working on diverse projects - from medical
+                  My journey in tech started with static websites using HTML and
+                  css, and evolved into full-stack web development. I've had the
+                  privilege of working on diverse projects - from medical
                   e-commerce platforms to social awareness applications, each
                   teaching me something new and exciting.
                 </p>
@@ -186,7 +185,7 @@ const About = () => {
                 {/* Quick Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">5+</div>
+                    <div className="text-3xl font-bold text-blue-400">2+</div>
                     <div className="text-white/60 text-sm">
                       Years Experience
                     </div>
