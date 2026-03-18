@@ -127,7 +127,7 @@ const About = () => {
               <div className="relative">
                 <div className="w-64 h-64 mx-auto rounded-2xl overflow-hidden border-4 border-gradient-to-r from-blue-500 to-purple-500">
                   <img
-                    src="./public/matu.png"
+                    src="./matu.png"
                     alt="Profile"
                     className="w-full h-full object-cover, "
                   />
